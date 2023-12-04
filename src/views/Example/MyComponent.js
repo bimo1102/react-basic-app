@@ -52,6 +52,12 @@ class MyComponent extends React.Component {
             arrJobs: currentjobs
         })
     }
+    componentDidUpdate(prevProps, prevState) {
+        console.log('run didUpdate', 'prev state', prevState, 'current state', this.state)
+    }
+    componentDidMount() {
+        console.log('run component did mount')
+    }
     //re-render
     render() {
         console.log('>>>> call render', this.state)
